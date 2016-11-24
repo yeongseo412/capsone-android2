@@ -169,7 +169,7 @@ public class NetworkManager {
         params.put("productName", productName);
         params.put("companyName", companyName);
 
-        Log.d("company", "company NAme test:" + companyName);
+        Log.d("company", "company Name test:" + companyName);
 
         client.post(context, PRODUCT_REGISTER_URL, params, new TextHttpResponseHandler() {
             @Override
