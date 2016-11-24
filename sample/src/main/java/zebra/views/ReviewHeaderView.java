@@ -1,6 +1,7 @@
 package zebra.views;
 
 import android.content.Context;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -20,6 +21,8 @@ public class ReviewHeaderView extends FrameLayout {
     TextView productName, description;
     RatingBar ratingBar;
 
+    Button eleven, auction, gmarket;
+
     public ReviewHeaderView(Context context) {
         super(context);
         init();
@@ -27,6 +30,11 @@ public class ReviewHeaderView extends FrameLayout {
 
     private void init() {
         inflate(getContext(), R.layout.review_header, this);
+
+        // initialize
+        eleven = (Button) findViewById(R.id.eleven);
+        auction = (Button) findViewById(R.id.aucion);
+        gmarket = (Button) findViewById(R.id.gmarket);
 
         productImage = (ImageView)findViewById(R.id.productImage);
         productName = (TextView)findViewById(R.id.productName);

@@ -50,16 +50,4 @@ public class ReviewAdapter extends BaseAdapter {
 
         return view;
     }
-
-    /*
-    @Override
-    public boolean isEnabled(int position) {
-        return false;
-    }
-
-    @Override
-    public boolean areAllItemsEnabled() {
-        return true;
-    }
-    */
 }
