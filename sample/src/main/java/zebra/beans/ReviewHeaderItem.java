@@ -10,7 +10,7 @@ public class ReviewHeaderItem {
     public Button eleven, auction, gmarket;
     public double ratingBar;
 
-    public ReviewHeaderItem(String productUrl, String productName, String description, Button eleven, Button auction, Button gmarket, double ratingBar){
+    public ReviewHeaderItem(String productUrl, String productName, String description, double ratingBar){
         this.productUrl = productUrl;
         this.productName = productName;
         this.description = description;
