@@ -31,16 +31,42 @@ public class ReviewFragment extends Fragment {
     ReviewAdapter mAdapter;
     ReviewHeaderView reviewHeaderView;
 
+    Button elevenSt_btn, auction_btn, gmarket_btn;
+
     Review result;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_review,container,false);
+        View view2 = inflater.inflate(R.layout.review_header,container,false);
+
+        elevenSt_btn = (Button)view2.findViewById(R.id.eleven);
+        auction_btn = (Button)view2.findViewById(R.id.auction);
+        gmarket_btn = (Button)view2.findViewById(R.id.gmarket);
+
+        elevenSt_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        auction_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        gmarket_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         result = ReviewManager.getInstance().getReview();
 
         setListView(view);
-
         return view;
     }
 

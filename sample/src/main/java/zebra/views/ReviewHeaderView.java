@@ -21,7 +21,7 @@ public class ReviewHeaderView extends FrameLayout {
     TextView productName, description;
     RatingBar ratingBar;
 
-    Button elevenSt_btn, auction_btn, gmarket_btn;
+
 
     public ReviewHeaderView(Context context) {
         super(context);
@@ -36,9 +36,7 @@ public class ReviewHeaderView extends FrameLayout {
         ratingBar = (RatingBar)findViewById(R.id.ratingBar);
         description = (TextView)findViewById(R.id.description);
 
-        elevenSt_btn = (Button)findViewById(R.id.eleven);
-        auction_btn = (Button)findViewById(R.id.aucion);
-        gmarket_btn = (Button)findViewById(R.id.gmarket);
+
     }
 
     public void setReviewHeader(ReviewHeaderItem reviewHeaderItem){
