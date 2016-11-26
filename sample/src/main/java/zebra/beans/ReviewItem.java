@@ -6,11 +6,11 @@ package zebra.beans;
 public class ReviewItem {
     public String profileImage;
     public String memberEmail;
-    public double ratingBar;
+    public int ratingBar;
     public String reviewText;
 
 
-    public ReviewItem(String profileImage, String memberEmail, double ratingBar, String reviewText){
+    public ReviewItem(String profileImage, String memberEmail, int ratingBar, String reviewText){
         this.profileImage = profileImage;
         this.memberEmail = memberEmail;
         this.ratingBar = ratingBar;

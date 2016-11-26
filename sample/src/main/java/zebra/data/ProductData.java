@@ -9,7 +9,7 @@ import android.os.Parcelable;
 public class ProductData implements Parcelable{
     public String productName;
     public String description;
-    public double starPoint;
+    public int starPoint;
     public String productUrl;
     public String barcode;
 
@@ -25,7 +25,7 @@ public class ProductData implements Parcelable{
         productName = in.readString();
         description = in.readString();
         productUrl = in.readString();
-        starPoint = in.readDouble();
+        starPoint = in.readInt();
         barcode = in.readString();
     }
 
@@ -34,7 +34,7 @@ public class ProductData implements Parcelable{
         dest.writeString(productName);
         dest.writeString(description);
         dest.writeString(productUrl);
-        dest.writeDouble(starPoint);
+        dest.writeInt(starPoint);
         dest.writeString(barcode);
     }
 

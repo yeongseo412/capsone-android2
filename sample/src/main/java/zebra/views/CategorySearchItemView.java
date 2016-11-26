@@ -35,6 +35,6 @@ public class CategorySearchItemView extends FrameLayout {
     public void setViewItem(SearchItem item) {
         Glide.with(getContext()).load(item.productUrl).into(productImage);
         productName.setText(item.productName);
-        ratingBar.setRating((float)item.ratingBar);
+        ratingBar.setRating((int)item.ratingBar);
     }
 }

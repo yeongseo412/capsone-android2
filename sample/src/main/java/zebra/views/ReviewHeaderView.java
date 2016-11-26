@@ -1,6 +1,8 @@
 package zebra.views;
 
 import android.content.Context;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -20,6 +22,8 @@ public class ReviewHeaderView extends FrameLayout {
     TextView productName, description;
     RatingBar ratingBar;
 
+    Button elevenSt_btn, auction_btn, gmarket_btn;
+
     public ReviewHeaderView(Context context) {
         super(context);
         init();
@@ -27,6 +31,11 @@ public class ReviewHeaderView extends FrameLayout {
 
     private void init() {
         inflate(getContext(), R.layout.review_header, this);
+
+        // initialize
+        elevenSt_btn= (Button) findViewById(R.id.eleven);
+        auction_btn = (Button) findViewById(R.id.aucion);
+        gmarket_btn = (Button) findViewById(R.id.gmarket);
 
         productImage = (ImageView)findViewById(R.id.productImage);
         productName = (TextView)findViewById(R.id.productName);
@@ -37,7 +46,29 @@ public class ReviewHeaderView extends FrameLayout {
     public void setReviewHeader(ReviewHeaderItem reviewHeaderItem){
         Glide.with(getContext()).load(reviewHeaderItem.productUrl).into(productImage);
         productName.setText(reviewHeaderItem.productName);
-        ratingBar.setRating((float) reviewHeaderItem.ratingBar);
+        ratingBar.setRating((int) reviewHeaderItem.ratingBar);
         description.setText(reviewHeaderItem.description);
+
+        // Listener
+        elevenSt_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        auction_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        gmarket_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

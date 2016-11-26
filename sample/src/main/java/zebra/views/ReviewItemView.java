@@ -51,7 +51,7 @@ public class ReviewItemView extends FrameLayout{
             }
         });
         memberEmail.setText(item.memberEmail);
-        ratingBar.setRating((float)item.ratingBar);
+        ratingBar.setRating((int)item.ratingBar);
         reviewText.setText(item.reviewText);
     }
 }

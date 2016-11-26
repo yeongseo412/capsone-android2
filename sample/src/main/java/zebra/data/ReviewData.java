@@ -9,7 +9,7 @@ import android.os.Parcelable;
 public class ReviewData implements Parcelable {
     public String email;
     public String reviewText;
-    public double starPoint;
+    public int starPoint;
     public String memberUrl;
     public String level;
     public String productUrl;
@@ -25,7 +25,7 @@ public class ReviewData implements Parcelable {
     public ReviewData(Parcel in){
         email = in.readString();
         reviewText = in.readString();
-        starPoint = in.readDouble();
+        starPoint = in.readInt();
         memberUrl = in.readString();
         level = in.readString();
         productUrl = in.readString();
@@ -35,7 +35,7 @@ public class ReviewData implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(email);
         dest.writeString(reviewText);
-        dest.writeDouble(starPoint);
+        dest.writeInt(starPoint);
         dest.writeString(memberUrl);
         dest.writeString(level);
         dest.writeString(productUrl);

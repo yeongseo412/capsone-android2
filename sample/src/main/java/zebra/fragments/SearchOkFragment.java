@@ -68,7 +68,7 @@ public class SearchOkFragment extends Fragment {
 
         String productUrl;
         String productName;
-        double starPoint;
+        int starPoint;
         String barcode;
 
         for (int i = 0; i < result.productInfo.size(); i++) {

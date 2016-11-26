@@ -45,23 +45,43 @@
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <Button
+            android:id="@+id/elevenSt_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="11st"/>
+
+        <Button
+            android:id="@+id/auction_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="auction"/>
+
+        <Button
+            android:id="@+id/gmarket_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="G-market"/>
+    </LinearLayout>
+
     <android.support.v7.widget.AppCompatRatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="5"
-        android:stepSize="0.5"
+        android:stepSize="1"
         android:isIndicator="true"
         android:theme="@style/RatingBar" />
 
-    <!--Button
-        android:id="@+id/dialogButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/rounded_button"
-        android:text="리뷰 작성"
-        android:textColor="@color/text_white" /-->
 </LinearLayout>

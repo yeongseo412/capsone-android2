@@ -68,9 +68,9 @@ public class NetworkManager {
         RequestParams params = new RequestParams();
         params.put("email", email);
         params.put("password", password);
-        params.put("token", GCMManager.getInstance().getToken());
+        // params.put("token", GCMManager.getInstance().getToken());
 
-        Log.d("token", "token: " + GCMManager.getInstance().getToken());
+        // Log.d("token", "token: " + GCMManager.getInstance().getToken());
 
         client.post(context, LOGIN_URL, params, new TextHttpResponseHandler() {
             @Override
@@ -96,7 +96,7 @@ public class NetworkManager {
 
     private static final String REVIEW_REGISTER_URL = SERVER_URL + "/appReviewRegister";
 
-    public void reviewRegister(Context context, String email, String reviewText, String barcode, double starPoint, String productUrl, String memberUrl, String level, final OnResultResponseListener<Review> listener) {
+    public void reviewRegister(Context context, String email, String reviewText, String barcode, int starPoint, String productUrl, String memberUrl, String level, final OnResultResponseListener<Review> listener) {
         RequestParams params = new RequestParams();
         params.put("email", email);
         params.put("reviewText", reviewText);
@@ -169,7 +169,7 @@ public class NetworkManager {
         params.put("productName", productName);
         params.put("companyName", companyName);
 
-        Log.d("company", "company NAme test:" + companyName);
+        Log.d("company", "company Name test:" + companyName);
 
         client.post(context, PRODUCT_REGISTER_URL, params, new TextHttpResponseHandler() {
             @Override
