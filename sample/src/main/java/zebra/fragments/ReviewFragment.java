@@ -37,11 +37,6 @@ public class ReviewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_review,container,false);
-        View view2 = inflater.inflate(R.layout.review_header, container, false);
-
-
-
-
         result = ReviewManager.getInstance().getReview();
 
         setListView(view);

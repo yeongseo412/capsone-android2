@@ -47,29 +47,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="11st"
-            android:id="@+id/elevenSt_btn"/>
+            android:id="@+id/eleven"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Auction"
-            android:id="@+id/aucion_btn"/>
+            android:text="auction"
+            android:id="@+id/auction"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Gmarket"
-            android:id="@+id/gmarket_btn"/>
+            android:text="gmarket"
+            android:id="@+id/gmarket"/>
+
     </LinearLayout>
+
 
     <android.support.v7.widget.AppCompatRatingBar
         android:id="@+id/ratingBar"

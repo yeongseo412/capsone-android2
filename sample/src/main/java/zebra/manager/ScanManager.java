@@ -16,7 +16,8 @@ public class ScanManager {
     private String barcode;
     private String productUrl;
     private boolean isGCM;
-/*
+
+    /*
     public void setIsGCM(boolean isGCM){
         this.isGCM = isGCM;
     }
@@ -24,7 +25,8 @@ public class ScanManager {
     public boolean getIsGCM(){
         return isGCM;
     }
-*/
+    */
+
     private ScanManager() {
         barcode = null;
         productUrl = null;
