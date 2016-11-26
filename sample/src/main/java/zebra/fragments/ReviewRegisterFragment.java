@@ -33,7 +33,7 @@ public class ReviewRegisterFragment  extends Fragment {
     Button registerButton, cancelButton;
     AppCompatRatingBar ratingBar;
     String email, barcode, productUrl, memberUrl, reviewText, level;
-    double starPoint;
+    int starPoint;
 
     @Nullable
     @Override
@@ -72,7 +72,7 @@ public class ReviewRegisterFragment  extends Fragment {
                 reviewText = reviewEditText.getText().toString();
                 Log.d("ReviewTEST","reviewText:" + reviewText);
 
-                starPoint = (double) ratingBar.getRating();
+                starPoint = (int) ratingBar.getRating();
                 Log.d("ReviewTEST","starPoint: " + starPoint);
 
                 level = MemberManager.getInstance().getLevel();

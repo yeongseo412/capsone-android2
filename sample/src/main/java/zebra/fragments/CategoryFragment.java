@@ -36,24 +36,24 @@ public class CategoryFragment extends Fragment {
             }
         });
 
-        bookButton = (LinearLayout)v.findViewById(R.id.bookButton);
-        bookButton.setOnClickListener(new View.OnClickListener() {
+        appliancesButton = (LinearLayout)v.findViewById(R.id.appliancesButton);
+        appliancesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 network("1");
             }
         });
 
-        appliancesButton = (LinearLayout)v.findViewById(R.id.appliancesButton);
-        appliancesButton.setOnClickListener(new View.OnClickListener() {
+        beautyButton = (LinearLayout)v.findViewById(R.id.beautyButton);
+        beautyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 network("2");
             }
         });
 
-        beautyButton = (LinearLayout)v.findViewById(R.id.beautyButton);
-        beautyButton.setOnClickListener(new View.OnClickListener() {
+        bookButton = (LinearLayout)v.findViewById(R.id.bookButton);
+        bookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 network("3");

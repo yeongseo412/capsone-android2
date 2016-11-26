@@ -7,10 +7,10 @@ public class SearchItem {
 
     public String productUrl;
     public String productName;
-    public double ratingBar;
+    public int ratingBar;
     public String barcode;
 
-    public SearchItem(String productUrl, String productName, double ratingBar, String barcode){
+    public SearchItem(String productUrl, String productName, int ratingBar, String barcode){
         this.productUrl = productUrl;
         this.productName = productName;
         this.ratingBar = ratingBar;

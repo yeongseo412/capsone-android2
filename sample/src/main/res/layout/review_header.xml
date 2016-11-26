@@ -54,21 +54,21 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="11st"
-            android:id="@+id/eleven"/>
+            android:id="@+id/elevenSt_btn"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Auction"
-            android:id="@+id/aucion"/>
+            android:id="@+id/aucion_btn"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Gmarket"
-            android:id="@+id/gmarket"/>
+            android:id="@+id/gmarket_btn"/>
     </LinearLayout>
 
     <android.support.v7.widget.AppCompatRatingBar
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="5"
-        android:stepSize="0.5"
+        android:stepSize="1"
         android:isIndicator="true"
         android:theme="@style/RatingBar" />
 

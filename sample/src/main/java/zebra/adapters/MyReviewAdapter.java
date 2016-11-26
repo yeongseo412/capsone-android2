@@ -38,17 +38,17 @@ public class MyReviewAdapter extends BaseAdapter{
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        MyReviewItemView view = null;
+public View getView(int position, View convertView, ViewGroup parent) {
+    MyReviewItemView view = null;
 
-        if (convertView == null) {
-            view = new MyReviewItemView(parent.getContext());
-        } else {
-            view = (MyReviewItemView) convertView;
-        }
-        view.setViewItem(items.get(position));
-
-        return view;
+    if (convertView == null) {
+        view = new MyReviewItemView(parent.getContext());
+    } else {
+        view = (MyReviewItemView) convertView;
     }
+    view.setViewItem(items.get(position));
+
+    return view;
+}
 
 }

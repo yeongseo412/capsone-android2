@@ -38,7 +38,7 @@ public class ReviewHeaderView extends FrameLayout {
     public void setReviewHeader(ReviewHeaderItem reviewHeaderItem){
         Glide.with(getContext()).load(reviewHeaderItem.productUrl).into(productImage);
         productName.setText(reviewHeaderItem.productName);
-        ratingBar.setRating((float) reviewHeaderItem.ratingBar);
+        ratingBar.setRating((int) reviewHeaderItem.ratingBar);
         description.setText(reviewHeaderItem.description);
     }
 }
