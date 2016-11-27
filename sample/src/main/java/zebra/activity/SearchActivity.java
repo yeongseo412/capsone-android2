@@ -123,7 +123,7 @@ public class SearchActivity extends AppCompatActivity {
         mDrawerToggle.syncState();
     }
 
-    public void network(String keyWord){
+    public void network(String keyword){
         NetworkManager.getInstance().productSearch(this, keyword, new NetworkManager.OnResultResponseListener<Search>() {
             @Override
             public void onSuccess(Search result) {

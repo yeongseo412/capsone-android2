@@ -13,21 +13,17 @@
         android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/category_0"
+        android:background="@drawable/rounded_button"
         android:orientation="vertical">
 
-
-    </LinearLayout>
-
-    <!-- Book -->
-    <LinearLayout
-        android:id="@+id/bookButton"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/category_1"
-        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALL"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"/>
 
     </LinearLayout>
 
@@ -38,11 +34,19 @@
         android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/category_2"
+        android:background="@drawable/rounded_cancel_button"
         android:orientation="vertical">
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appliances"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"/>
 
+    </LinearLayout>
 
     <!-- Beauty -->
     <LinearLayout
@@ -51,8 +55,38 @@
         android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/category_3"
+        android:background="@drawable/rounded_button"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beauty"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
+    <!-- Book -->
+    <LinearLayout
+        android:id="@+id/bookButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_cancel_button"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Books"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"/>
 
     </LinearLayout>
 
@@ -63,8 +97,17 @@
         android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/category_4"
+        android:background="@drawable/rounded_button"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"/>
 
     </LinearLayout>
 
@@ -75,8 +118,17 @@
         android:layout_height="60dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/category_5"
+        android:background="@drawable/rounded_cancel_button"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Necessaries"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"/>
 
     </LinearLayout>
 

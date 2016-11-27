@@ -22,7 +22,7 @@ import zebra.manager.MemberManager;
  * Created by multimedia on 2016-05-29.
  */
 public class MyPageFragment extends Fragment {
-    TextView email, level, name, point;
+    TextView  level, name, point;
     String levelString;
     ImageView profileImageView;
 
@@ -32,7 +32,6 @@ public class MyPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my_page, container, false);
 
-        email = (TextView)view.findViewById(R.id.email);
         level = (TextView)view.findViewById(R.id.level);
         name = (TextView)view.findViewById(R.id.name);
         point = (TextView)view.findViewById(R.id.point);
@@ -44,7 +43,6 @@ public class MyPageFragment extends Fragment {
     }
 
     public void setProfile(View view){
-        email.setText(MemberManager.getInstance().getEmail());
 
         levelString = MemberManager.getInstance().getLevel();
         level.setText(levelString);

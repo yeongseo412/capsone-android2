@@ -60,6 +60,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:backgroundTint="@color/primary"
                     android:gravity="center_vertical"
                     android:hint="검색어를 입력"

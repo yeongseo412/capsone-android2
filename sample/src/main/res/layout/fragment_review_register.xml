@@ -68,7 +68,7 @@
                     android:id="@+id/cancelButton"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_button"
+                    android:background="@drawable/rounded_cancel_button"
                     android:text="취소"
                     android:layout_marginLeft="10dp"
                     android:textColor="#FFFFFF"

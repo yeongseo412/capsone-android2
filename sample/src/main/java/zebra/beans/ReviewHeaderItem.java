@@ -8,9 +8,9 @@ import android.widget.Button;
 public class ReviewHeaderItem {
     public String productUrl, productName, description;
     public Button eleven, auction, gmarket;
-    public double ratingBar;
+    public int ratingBar;
 
-    public ReviewHeaderItem(String productUrl, String productName, String description, double ratingBar){
+    public ReviewHeaderItem(String productUrl, String productName, String description, int ratingBar){
         this.productUrl = productUrl;
         this.productName = productName;
         this.description = description;
