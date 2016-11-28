@@ -7,12 +7,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 import example.zxing.R;
 import zebra.adapters.ReviewAdapter;
@@ -38,31 +44,7 @@ public class ReviewFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_review,container,false);
-        View view2 = inflater.inflate(R.layout.review_header,container,false);
-
-        elevenSt_btn = (Button)view2.findViewById(R.id.eleven);
-        auction_btn = (Button)view2.findViewById(R.id.auction);
-        gmarket_btn = (Button)view2.findViewById(R.id.gmarket);
-
-        elevenSt_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        auction_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        gmarket_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        View view  = inflater.inflate(R.layout.fragment_review, container, false);
 
         result = ReviewManager.getInstance().getReview();
 
@@ -86,5 +68,61 @@ public class ReviewFragment extends Fragment {
                     result.reviews.get(i).reviewText);
             mAdapter.add(item);
         }
+
+        // 구매 연결 버튼 초기화
+        elevenSt_btn = (Button) reviewHeaderView.findViewById(R.id.eleven);
+        auction_btn = (Button)reviewHeaderView.findViewById(R.id.auction);
+        gmarket_btn = (Button)reviewHeaderView.findViewById(R.id.gmarket);
+
+        // click listener
+        elevenSt_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String encodeStr = result.productInfo.productName;
+
+                try {
+                    encodeStr = URLEncoder.encode(encodeStr, "euc-kr");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://search.11st.co.kr/SearchPrdAction.tmall?method=getTotalSearchSeller&kwd=" + encodeStr));
+                    startActivity(intent);
+                }
+                catch(UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        auction_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String encodeStr = result.productInfo.productName;
+
+                try {
+                    encodeStr = URLEncoder.encode(encodeStr, "euc-kr");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://search.gmarket.co.kr/search.aspx?keyword=" + encodeStr));
+                    startActivity(intent);
+                }
+                catch(UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        gmarket_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String encodeStr = result.productInfo.productName;
+
+                try {
+                    encodeStr = URLEncoder.encode(encodeStr, "euc-kr");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://search.auction.co.kr/search/search.aspx?keyword=" + encodeStr));
+                    startActivity(intent);
+                }
+                catch(UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+
     }
 }

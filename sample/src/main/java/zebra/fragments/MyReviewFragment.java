@@ -19,16 +19,16 @@ import zebra.manager.MemberManager;
  * Created by multimedia on 2016-05-29.
  */
 public class MyReviewFragment extends Fragment {
-    TextView point, count;
+        TextView point, count;
 
-    ListView reviewList;
-    MyReviewAdapter mAdapter;
-    MyReview result;
+        ListView reviewList;
+            MyReviewAdapter mAdapter;
+            MyReview result;
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_my_review, container, false);
+            @Nullable
+            @Override
+            public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+                View view = inflater.inflate(R.layout.fragment_my_review, container, false);
 
         point = (TextView)view.findViewById(R.id.point);
         count = (TextView)view.findViewById(R.id.count);
