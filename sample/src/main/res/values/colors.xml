@@ -4,12 +4,12 @@
     <!-- for toolbar -->
     <color name="primary">#849E54
     </color>
-    <color name="less_primary">#cbd7b4</color>
+    <color name="less_primary">#bfd19d</color>
     <color name="gray">#bebebe</color>
     <color name="primaryDark">#0B5AF8</color>
     <color name="ripple">#80A4FF</color>
     <color name="accent">#65a2f7</color>
-    <color name="accent_pressed">#2f72f7</color>
+    <color name="accent_pressed">#bebebe</color>
 
     <!--for ratingbar-->
     <color name="ratinBar">#ffd700</color>
