@@ -23,6 +23,7 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import example.zxing.R;
+import example.zxing.SampleApplication;
 import zebra.adapters.NaviAdapter;
 import zebra.adapters.ReviewTabsAdapter;
 import zebra.beans.NaviItem;
@@ -38,6 +39,8 @@ import zebra.views.NaviHeaderView;
  * Created by multimedia on 2016-05-27.
  */
 public class ReviewActivityTest extends AppCompatActivity {
+    SampleApplication global = new SampleApplication();
+
     String barcode,productUrl;
     Review result;
 
@@ -56,6 +59,8 @@ public class ReviewActivityTest extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_test);
+
+
 
         setToolbar();
 
@@ -94,6 +99,13 @@ public class ReviewActivityTest extends AppCompatActivity {
 
                 } else if (tabId.equals("tab2")) {
 
+                    if(global.getGlobalScanCheck() == false){
+                        Toast.makeText(getApplicationContext(), "바코드 스캔이 필요합니다.", Toast.LENGTH_LONG).show();
+
+                        new IntentIntegrator(ReviewActivityTest.this).setCaptureActivity(ToolbarCaptureActivity.class).initiateScan();
+
+                        tabHost.setCurrentTab(0);
+                    }
                 } else {
 
                 }

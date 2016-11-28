@@ -12,6 +12,7 @@ import com.loopj.android.http.TextHttpResponseHandler;
 
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.client.HttpClient;
+import example.zxing.SampleApplication;
 import zebra.json.Login;
 import zebra.json.MyReview;
 import zebra.json.Review;
@@ -23,6 +24,8 @@ import zebra.json.Search;
 public class NetworkManager {
 
     private static NetworkManager instance;
+
+    SampleApplication global = new SampleApplication();
 
     public static NetworkManager getInstance() {
         if (instance == null) {
@@ -115,6 +118,9 @@ public class NetworkManager {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
+
+                global.setGlobalScanCheck(false);
+
                 Log.d("success", "review Register Success!");
 
                 String jsonResponseString = responseString.replaceAll("[\n \r]", "");
@@ -143,6 +149,8 @@ public class NetworkManager {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                global.setGlobalScanCheck(true);
+
                 String jsonResponseString = responseString.replaceAll("[\n \r]", "");
                 if (jsonResponseString.equals("{\"result\":\"null\"}")){
                     Review result = null;
@@ -179,6 +187,7 @@ public class NetworkManager {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                global.setGlobalScanCheck(false);
 
                 Log.d("success", "sucesss product Register");
                 String jsonResponseString = responseString.replaceAll("[\n \r]", "");
